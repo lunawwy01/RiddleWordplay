@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Gueese The Word!</title>
+  </head>
+  <body>
+    <header>
+      <h1>Guess The Word!</h1>
+      <button class="btn again">Again!</button>
+      <div class="number">?</div>
+    </header>
+    <main>
+      <section class="left">
+        <div>
+          <input type="text" class="guess" maxlength="1" />
+          <input type="text" class="guess" maxlength="1" />
+          <input type="text" class="guess" maxlength="1" />
+        </div>
+        <div>
+          <button class="btn check">Check!</button>
+        </div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="problem">
+          <p>ABC: One letter is correct and its position is correct.</p>
+          <div class="empty"></div>
+          <p>AEF: One letter is correct but its position is not correct.</p>
+          <div class="empty"></div>
+          <p>
+            CKA: Two letters are correct but both of their positions are not
+            correct.
+          </p>
+          <div class="empty"></div>
+          <p>DEB: None of the letter is correct.</p>
+          <div class="empty"></div>
+          <p>BDK: One letter is correct but its position is not correct</p>
+        </div>
+      </section>
+      <section class="right">
+        <p class="message">Start guessing...</p>
+        <p class="label-score">💯 Score: <span class="score">20</span></p>
+        <p class="label-highscore">
+          🥇 Highscore: <span class="highscore">0</span>
+        </p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
