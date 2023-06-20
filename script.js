@@ -35,12 +35,22 @@ document.querySelector(".check").addEventListener("click", function () {
       highscore = score;
       document.querySelector(".highscore").textContent = highscore;
     }
+  } else if (guess1 != "K" || guess2 != "F" || guess3 != "C") {
+    if (score > 1) {
+      displayMessage("At least one letter is wrong 😣!");
+      score -= 5;
+      document.querySelector(".score").textContent = score;
+    } else {
+      displayMessage("💥 You lost the game!");
+      document.querySelector(".score").textContent = 0;
+    }
   }
 
   document.querySelector(".again").addEventListener("click", function () {
     displayMessage("Start guessing...");
-    // document.querySelector(".score").textContent = score;
-    // document.querySelector(".number").textContent = "?";
+    score = 20;
+    document.querySelector(".score").textContent = score;
+    document.querySelector(".number").textContent = "?";
     document.querySelector(".guess:nth-of-type(1)").value = "";
     document.querySelector(".guess:nth-of-type(2)").value = "";
     document.querySelector(".guess:nth-of-type(3)").value = "";
